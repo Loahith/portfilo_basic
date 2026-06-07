@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loahith V — Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ───── CURSOR ───── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ───── NAVBAR ───── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">L<span>.</span>V</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ───── MOBILE MENU ───── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#hero" class="mob-link">Home</a></li>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#skills" class="mob-link">Skills</a></li>
+      <li><a href="#experience" class="mob-link">Experience</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#education" class="mob-link">Education</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ───── HERO ───── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Available for Opportunities
+      </div>
+      <h1 class="hero-name reveal">
+        Loahith<br /><span class="accent-text">V</span>
+      </h1>
+      <p class="hero-role reveal">
+        <span class="typed-text" id="typedText"></span>
+        <span class="cursor-blink">|</span>
+      </p>
+      <p class="hero-summary reveal">
+        Results-driven CS undergraduate crafting scalable digital solutions
+        with expertise in full-stack development & UI/UX design.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">
+          View Projects <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-ghost">
+          Contact Me
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat-card glass">
+          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-label">Internships</span>
+        </div>
+        <div class="stat-card glass">
+          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-card glass">
+          <span class="stat-num" data-target="200">0</span>
+          <span class="stat-label">LeetCode Solved</span>
+        </div>
+        <div class="stat-card glass">
+          <span class="stat-num" data-target="5">0</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="profile-ring">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="profile-img-wrap glass">
+          <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Loahith V" class="profile-img" onerror="this.style.display='none'; this.parentElement.classList.add('no-photo')" />
+          <div class="profile-placeholder">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+        <div class="float-badge fb-1 glass"><i class="fab fa-react"></i> React</div>
+        <div class="float-badge fb-2 glass"><i class="fab fa-node-js"></i> Node.js</div>
+        <div class="float-badge fb-3 glass"><i class="fab fa-figma"></i> Figma</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── ABOUT ───── -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-tag reveal">About Me</div>
+      <h2 class="section-title reveal">The Developer <span class="accent-text">Behind the Code</span></h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a <strong>final-year Computer Science Engineering</strong> undergraduate at V.S.B Engineering College, Karur,
+            passionate about building intuitive, accessible digital experiences that solve real-world problems.
+          </p>
+          <p>
+            With <strong>3 industry internships completed in a single academic year</strong> — spanning UI/UX design,
+            front-end development, and full-stack engineering — I bring both design sensibility and engineering rigour to every project.
+          </p>
+          <p>
+            I'm driven by a curiosity to learn fast, build clean, and deliver work that matters. I thrive in
+            agile teams and love bridging the gap between design and engineering.
+          </p>
+          <div class="about-links">
+            <a href="https://linkedin.com/in/loahith-v-a9b062392" target="_blank" class="social-pill glass">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Loahith" target="_blank" class="social-pill glass">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://leetcode.com" target="_blank" class="social-pill glass">
+              <i class="fas fa-code"></i> LeetCode
+            </a>
+          </div>
+        </div>
+        <div class="about-cards reveal">
+          <div class="info-card glass">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span class="card-label">Location</span>
+              <span class="card-val">Madurai, Tamil Nadu</span>
+            </div>
+          </div>
+          <div class="info-card glass">
+            <i class="fas fa-graduation-cap"></i>
+            <div>
+              <span class="card-label">Degree</span>
+              <span class="card-val">B.E. Computer Science</span>
+            </div>
+          </div>
+          <div class="info-card glass">
+            <i class="fas fa-star"></i>
+            <div>
+              <span class="card-label">CGPA</span>
+              <span class="card-val">8.20 / 10</span>
+            </div>
+          </div>
+          <div class="info-card glass">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span class="card-label">Email</span>
+              <span class="card-val">loahithv2006@gmail.com</span>
+            </div>
+          </div>
+          <div class="leetcode-card glass">
+            <div class="lc-header">
+              <i class="fas fa-code"></i>
+              <span>LeetCode Progress</span>
+            </div>
+            <div class="lc-stats">
+              <div class="lc-circle">
+                <svg viewBox="0 0 120 120">
+                  <circle cx="60" cy="60" r="50" class="lc-track" />
+                  <circle cx="60" cy="60" r="50" class="lc-fill" id="lcCircle" />
+                </svg>
+                <div class="lc-num">200+</div>
+              </div>
+              <div class="lc-breakdown">
+                <div class="lc-item easy"><span class="dot"></span>Easy <b>~100</b></div>
+                <div class="lc-item medium"><span class="dot"></span>Medium <b>~80</b></div>
+                <div class="lc-item hard"><span class="dot"></span>Hard <b>~20</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── SKILLS ───── -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-tag reveal">Technical Skills</div>
+      <h2 class="section-title reveal">What I Work <span class="accent-text">With</span></h2>
+      <div class="skills-grid">
+
+        <div class="skill-group glass reveal">
+          <div class="skill-group-header">
+            <i class="fas fa-code"></i>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">HTML5</span>
+            <span class="skill-pill">CSS3</span>
+          </div>
+        </div>
+
+        <div class="skill-group glass reveal">
+          <div class="skill-group-header">
+            <i class="fas fa-layer-group"></i>
+            <h3>Frameworks & Libraries</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">React.js</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Express.js</span>
+            <span class="skill-pill">Bootstrap</span>
+          </div>
+        </div>
+
+        <div class="skill-group glass reveal">
+          <div class="skill-group-header">
+            <i class="fas fa-database"></i>
+            <h3>Databases</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">MySQL</span>
+            <span class="skill-pill">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skill-group glass reveal">
+          <div class="skill-group-header">
+            <i class="fas fa-tools"></i>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">Postman</span>
+            <span class="skill-pill">Figma</span>
+          </div>
+        </div>
+
+        <div class="skill-group glass reveal">
+          <div class="skill-group-header">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Concepts</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">REST APIs</span>
+            <span class="skill-pill">Responsive Design</span>
+            <span class="skill-pill">OOP</span>
+            <span class="skill-pill">SDLC</span>
+            <span class="skill-pill">Agile</span>
+          </div>
+        </div>
+
+        <div class="skill-group glass reveal">
+          <div class="skill-group-header">
+            <i class="fas fa-cloud"></i>
+            <h3>Cloud & Others</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill">IoT Fundamentals</span>
+            <span class="skill-pill">Linux Basics</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── EXPERIENCE ───── -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-tag reveal">Experience</div>
+      <h2 class="section-title reveal">My Industry <span class="accent-text">Journey</span></h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <div class="tl-meta">
+              <span class="tl-date"><i class="fas fa-calendar-alt"></i> Apr 2026 – May 2026</span>
+              <span class="tl-badge">Remote</span>
+            </div>
+            <h3 class="tl-role">UI/UX Designer Intern</h3>
+            <span class="tl-company">Codsoft</span>
+            <ul class="tl-points">
+              <li>Collaborated with cross-functional teams to translate user requirements into intuitive wireframes.</li>
+              <li>Designed interactive prototypes in Figma to visualize user interactions and application flows.</li>
+              <li>Conducted usability testing sessions, identified pain points, and iterated on designs.</li>
+              <li>Created user journey maps and flow diagrams to align stakeholder expectations.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Figma</span><span>UX Research</span><span>Prototyping</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <div class="tl-meta">
+              <span class="tl-date"><i class="fas fa-calendar-alt"></i> Feb 2026 – Mar 2026</span>
+              <span class="tl-badge">Remote</span>
+            </div>
+            <h3 class="tl-role">Front-End Developer Intern</h3>
+            <span class="tl-company">Advorix</span>
+            <ul class="tl-points">
+              <li>Built responsive, cross-browser-compatible web interfaces using HTML5, CSS3, and JavaScript.</li>
+              <li>Assisted in debugging and resolving front-end issues, reducing UI defects by <strong>30%</strong>.</li>
+              <li>Developed reusable UI components improving development efficiency across the team.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <div class="tl-meta">
+              <span class="tl-date"><i class="fas fa-calendar-alt"></i> Dec 2025 – Jan 2026</span>
+              <span class="tl-badge">Coimbatore</span>
+            </div>
+            <h3 class="tl-role">Full Stack Development Intern</h3>
+            <span class="tl-company">New Technologies</span>
+            <ul class="tl-points">
+              <li>Developed responsive full-stack web applications using JavaScript, HTML/CSS, and Node.js.</li>
+              <li>Collaborated in a team environment to design user-friendly interfaces and integrate REST APIs.</li>
+              <li>Assisted in API integration to enhance application functionality and back-end connectivity.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>Node.js</span><span>REST APIs</span><span>Full Stack</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── PROJECTS ───── -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-tag reveal">Projects</div>
+      <h2 class="section-title reveal">Things I've <span class="accent-text">Built</span></h2>
+      <div class="projects-grid">
+
+        <div class="project-card glass reveal">
+          <div class="project-img-wrap">
+            <div class="project-img proj-1">
+              <i class="fas fa-mountain"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/Loahith" target="_blank" class="overlay-btn">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-type">Full Stack</div>
+            <h3 class="project-name">Echoes of Jharkhand</h3>
+            <p class="project-desc">
+              Tourism web platform showcasing the cultural heritage and travel destinations of Jharkhand with curated destination guides and trip-planning features.
+            </p>
+            <div class="project-tech">
+              <span>HTML/CSS</span><span>JavaScript</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span>
+            </div>
+            <ul class="project-highlights">
+              <li><i class="fas fa-check-circle"></i> Interactive destination cards with image galleries</li>
+              <li><i class="fas fa-check-circle"></i> RESTful APIs for destinations & user queries</li>
+              <li><i class="fas fa-check-circle"></i> Search & filter by category, district, season</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal">
+          <div class="project-img-wrap">
+            <div class="project-img proj-2">
+              <i class="fas fa-hospital"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/Loahith" target="_blank" class="overlay-btn">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-type">Front-End</div>
+            <h3 class="project-name">Hospital Management System</h3>
+            <p class="project-desc">
+              Comprehensive front-end application managing hospital workflows — patient registration, appointment scheduling, doctor directory, and ward management.
+            </p>
+            <div class="project-tech">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span>
+            </div>
+            <ul class="project-highlights">
+              <li><i class="fas fa-check-circle"></i> Multi-page responsive UI with WCAG compliance</li>
+              <li><i class="fas fa-check-circle"></i> Client-side form validation & dynamic rendering</li>
+              <li><i class="fas fa-check-circle"></i> Interactive dashboard with live summary cards</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal">
+          <div class="project-img-wrap">
+            <div class="project-img proj-3">
+              <i class="fas fa-tint"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="https://github.com/Loahith" target="_blank" class="overlay-btn">
+                <i class="fab fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-type">Full Stack</div>
+            <h3 class="project-name">Quick Blood Donor Finder</h3>
+            <p class="project-desc">
+              Emergency-oriented platform connecting patients with registered blood donors in real time via location-aware search and instant availability toggles.
+            </p>
+            <div class="project-tech">
+              <span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span>
+            </div>
+            <ul class="project-highlights">
+              <li><i class="fas fa-check-circle"></i> Search by blood group & real-time location filters</li>
+              <li><i class="fas fa-check-circle"></i> Secure REST API with donor auth & registration</li>
+              <li><i class="fas fa-check-circle"></i> Real-time availability toggle for donors</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── EDUCATION ───── -->
+  <section class="education section" id="education">
+    <div class="container">
+      <div class="section-tag reveal">Education</div>
+      <h2 class="section-title reveal">Academic <span class="accent-text">Background</span></h2>
+      <div class="edu-grid">
+
+        <div class="edu-card glass reveal">
+          <div class="edu-icon"><i class="fas fa-university"></i></div>
+          <div class="edu-content">
+            <span class="edu-period">Sep 2024 – Present</span>
+            <h3>Bachelor of Engineering — CSE</h3>
+            <p class="edu-inst">V.S.B Engineering College, Karur</p>
+            <div class="edu-score"><span class="score-label">CGPA</span><span class="score-val">8.20 / 10</span></div>
+          </div>
+        </div>
+
+        <div class="edu-card glass reveal">
+          <div class="edu-icon"><i class="fas fa-school"></i></div>
+          <div class="edu-content">
+            <span class="edu-period">Completed May 2024</span>
+            <h3>Class XII — Higher Secondary Certificate</h3>
+            <p class="edu-inst">Keren Matriculation Higher Secondary School, Madurai</p>
+            <div class="edu-score"><span class="score-label">Score</span><span class="score-val">85%</span></div>
+          </div>
+        </div>
+
+        <div class="edu-card glass reveal">
+          <div class="edu-icon"><i class="fas fa-book-open"></i></div>
+          <div class="edu-content">
+            <span class="edu-period">Completed 2022</span>
+            <h3>Class X — Secondary School Certificate</h3>
+            <p class="edu-inst">Keren Matriculation Higher Secondary School, Madurai</p>
+            <div class="edu-score"><span class="score-label">Score</span><span class="score-val">87.7%</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certifications -->
+      <div class="section-tag reveal" style="margin-top:4rem;">Certifications</div>
+      <h2 class="section-title reveal">Verified <span class="accent-text">Credentials</span></h2>
+      <div class="cert-grid">
+        <div class="cert-card glass reveal">
+          <i class="fas fa-certificate"></i>
+          <div>
+            <span class="cert-issuer">NPTEL</span>
+            <p>Programming in Java</p>
+          </div>
+        </div>
+        <div class="cert-card glass reveal">
+          <i class="fas fa-certificate"></i>
+          <div>
+            <span class="cert-issuer">NPTEL</span>
+            <p>Database Management Systems</p>
+          </div>
+        </div>
+        <div class="cert-card glass reveal">
+          <i class="fas fa-certificate"></i>
+          <div>
+            <span class="cert-issuer">Infosys Springboard</span>
+            <p>Python Foundation Certification</p>
+          </div>
+        </div>
+        <div class="cert-card glass reveal">
+          <i class="fas fa-certificate"></i>
+          <div>
+            <span class="cert-issuer">HackerRank</span>
+            <p>Python (Problem Solving)</p>
+          </div>
+        </div>
+        <div class="cert-card glass reveal">
+          <i class="fas fa-certificate"></i>
+          <div>
+            <span class="cert-issuer">Cisco Academy</span>
+            <p>Introduction to IoT &amp; Digital Transformation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── CONTACT ───── -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-tag reveal">Contact</div>
+      <h2 class="section-title reveal">Let's Work <span class="accent-text">Together</span></h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="contact-intro">
+            I'm currently open to full-time roles, internships, and freelance projects.
+            Whether you have a role in mind or just want to say hello — my inbox is always open.
+          </p>
+          <div class="contact-items">
+            <a href="mailto:loahithv2006@gmail.com" class="contact-item glass">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="ci-label">Email</span>
+                <span class="ci-val">loahithv2006@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:+919360459329" class="contact-item glass">
+              <div class="ci-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <span class="ci-label">Phone</span>
+                <span class="ci-val">+91 93604 59329</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/loahith-v-a9b062392" target="_blank" class="contact-item glass">
+              <div class="ci-icon"><i class="fab fa-linkedin"></i></div>
+              <div>
+                <span class="ci-label">LinkedIn</span>
+                <span class="ci-val">loahith-v-a9b062392</span>
+              </div>
+            </a>
+            <a href="https://github.com/Loahith" target="_blank" class="contact-item glass">
+              <div class="ci-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span class="ci-label">GitHub</span>
+                <span class="ci-val">github.com/Loahith</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form glass reveal" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Job Opportunity / Project Inquiry" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Tell me about the opportunity or project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full">
+            Send Message <i class="fas fa-paper-plane"></i>
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">L<span>.</span>V</div>
+      <p>Designed &amp; Built by <strong>Loahith V</strong> • 2026</p>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/loahith-v-a9b062392" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Loahith" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:loahithv2006@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-line"></div>
+  </footer>
+
+  <!-- scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
